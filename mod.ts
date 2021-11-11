@@ -1,1 +1,1 @@
-export * from "./src/server.ts";
+export { createSimpleSecureWebsocketServer } from "./src/create-server.ts";

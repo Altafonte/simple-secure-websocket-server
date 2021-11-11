@@ -1,10 +1,10 @@
-import { createSimpleSecureWebsocketServer, WebsocketHandler } from "../mod.ts";
+import { createSimpleSecureWebsocketServer } from "../mod.ts";
 
-const socketHandler: WebsocketHandler = socket => {
-  socket.onerror = e => console.error("socket error", e);
+const socketHandler = (socket: WebSocket) => {
+  socket.onerror = (e) => console.error("socket error", e);
   socket.onopen = () => console.log("new socket connection", socket);
   socket.onclose = () => console.log("bye, socket connection", socket);
-}
+};
 
 const server = createSimpleSecureWebsocketServer({
   socketHandler,
