@@ -11,7 +11,7 @@
 ### Server
 
 ```ts
-import { createSimpleSecureWebsocketServer } from "https://deno.land/x/simple-secure-websocket-server/mod.ts";
+import { createSimpleSecureWebsocketServer } from "https://deno.land/x/wss@1.0.1/mod.ts";
 
 const socketHandler = (socket: WebSocket) => {
   socket.onerror = (e) => console.error("socket error", e);
